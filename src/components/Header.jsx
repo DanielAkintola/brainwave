@@ -12,7 +12,7 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
 
   useEffect(() => {
-    const selectedSection = document.querySelector(pathname.hash);
+    const selectedSection = document.querySelector(pathname.hash || "body");
     addScrollableTarget(selectedSection);
   }, [pathname]);
 
